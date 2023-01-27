@@ -53,7 +53,7 @@ function promptplaylist() {
 }
 
 function download_txt() {
-    var textToSave = JSON.stringify(obj);
+    var textToSave = JSON.stringify(obj, null, "\t");
     var hiddenElement = document.createElement('a');
   
     hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
