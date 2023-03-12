@@ -4,30 +4,35 @@
             "name":"KuntDev's Story",
             "publisher": "Sigman",
             "bg":"thumbnails/SigrapCoverArt.png",
+            "description": "Sigman's Best DissTrack!",
             "audio":"sampleaudio/KuntDev's Story - Sigman.mp3"
         },
         {
             "name":"Morning Bells",
             "publisher": "Memeforest OST",
             "bg":"thumbnails/Memeforest.png",
+            "description": "Memeforest's Village Theme",
             "audio":"sampleaudio/morningbells.wav"
         },
         {
             "name":"Toasty",
             "publisher": "Memeforest OST",
             "bg":"thumbnails/Memeforest.png",
+            "description": "Memeforest's Title Theme!",
             "audio":"sampleaudio/toasty.wav"
         },
         {
             "name":"Berimanlah - The Beat",
             "publisher": "Lil Rizky Prod",
             "bg":"thumbnails/lilrizkytheultimaterappist.jpg",
+            "description": "Hai Orang Orang Yang Beriman...",
             "audio":"sampleaudio/berimanlah.wav"
         },
         {
             "name":"Life is whack",
             "publisher": "Sigman",
             "bg":"thumbnails/lifeiswhacksigman.png",
+            "description": "This is why life is whack...",
             "audio":"sampleaudio/sigmanlifeiswhack.mp3"
         }
             ]

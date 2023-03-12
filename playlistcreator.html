@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="icon" href="whitelogo.png">
-<title>Brotify - Home</title>
-<link rel="stylesheet" href="interfont/inter.css">
-<link rel="stylesheet" href="extradark.css">
-<!-- <script src="homepageloader.js"></script> -->
-<meta charset= "utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="fontawesome.js" crossorigin="anonymous"></script>
-<script src="player.js"></script>
-<script src="playlistcreator.js"></script>
+	<link rel="icon" href="whitelogo.png">
+	<title>Brotify - Home</title>
+	<link rel="stylesheet" href="interfont/inter.css">
+	<link rel="stylesheet" href="extradark.css">
+	<!-- <script src="homepageloader.js"></script> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="fontawesome.js" crossorigin="anonymous"></script>
+	<script src="player.js" defer></script>
+	<script src="playlistcreator.js" defer></script>
 </head>
 
 <body>
-	
-		<nav>
+
+	<nav>
 		<ul>
 			<a href="index.html"><img src="whitelogo.png" class="logo"></a>
 			<li><a><i class="fa-solid fa-comment-dollar"></i> Brotify is free! No subscription is needed</a></li>
 		</ul>
-		</nav>
-		<div id="sidebar">
-			<a href="index.html"><h4><i class="fa-solid fa-house"></i> Home</h4></a>
-			<BR>
-			<a href="playlistcreator.html"><h4><i class="fa-solid fa-icons"></i> Playlist Creator</h4></a>
-			<BR><hr style="border: gray solid 1px;"><BR>
-			<h4 onclick="promptplaylist()"><i class="fa-solid fa-music"></i> Open Playlist</h4>
-			<BR>
-			<h4 onclick="about()"><i class="fa-solid fa-circle-question"></i> About</h4>
-			<BR><hr style="border: gray solid 1px;"><BR>
-			<p>&copy; Arsyad&Bagus Studios</p>
-		</div>
-<section>
-
-	<h2>Welcome Back To Brotify!</h2><br>
-	<fieldset>
-		<legend>Playlist creator</legend>
-		<input id="title" placeholder="Title" style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
-		<input id="publisher" placeholder="Description/Publisher" style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
-		<input id="coverimg" placeholder="Cover Image" style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
-		<input id="audiourl" placeholder="Audio URL" style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
-		<br>
-		<input onclick="createplaylist()" type="button" value="Create!" style="text-align: center; background: #222222; padding: 10px; color: lightgray;">
-	</fieldset>
-	<fieldset>
-		<legend id="Playlisttitle">Playlist preview</legend>
-		<div id="epikestshows"></div>
-	</fieldset>
-	<fieldset>
-		<legend>Save playlist file</legend>
-		<input onclick="download_txt()" type="button" value="Download" style="text-align: center; background: #222222; padding: 10px; color: lightgray;">
-	</fieldset>
-</section>
-<div id="audioinfo">
-	<!-- <div>
-		<input type="range">
-	</div> -->
-	<div>
-		<audio src="" id="player" autoplay controls controlslist="nodownload"></audio>
-		<!-- <button>
-			<i class="fa-solid fa-backward"></i>
-		</button>
-		<button style="background: white; color: #3d3d3d;" id="playbutton" onclick="play()">
-			<i class="fa-solid fa-play"></i>
-		</button>
-		<button>
-			<i class="fa-solid fa-forward"></i>
-		</button> -->
+	</nav>
+	<div id="sidebar">
+		<a href="index.html">
+			<h4><i class="fa-solid fa-house"></i> Home</h4>
+		</a>
+		<BR>
+		<a href="playlistcreator.html">
+			<h4><i class="fa-solid fa-icons"></i> Playlist Creator</h4>
+		</a>
+		<BR>
+		<hr style="border: gray solid 1px;"><BR>
+		<h4 onclick="promptplaylist()"><i class="fa-solid fa-music"></i> Open Playlist</h4>
+		<BR>
+		<h4 onclick="about()"><i class="fa-solid fa-circle-question"></i> About</h4>
+		<BR>
+		<hr style="border: gray solid 1px;"><BR>
+		<p>&copy; Arsyad&Bagus Studios</p>
 	</div>
-</div>
+	<section>
+
+		<h2>Welcome Back To Brotify!</h2><br>
+		<fieldset>
+			<legend>Playlist creator</legend>
+			<input id="title" placeholder="Title"
+				style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
+			<input id="publisher" placeholder="Description/Publisher"
+				style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
+			<input id="coverimg" placeholder="Cover Image"
+				style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
+			<input id="description" placeholder="Description"
+				style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
+			<input id="audiourl" placeholder="Audio URL"
+				style="text-align: left; background: #222222; padding: 10px; color: lightgray;">
+			<br>
+			<input onclick="createplaylist()" type="button" value="Create!"
+				style="text-align: center; background: #222222; padding: 10px; color: lightgray;">
+		</fieldset>
+		<fieldset>
+			<legend id="Playlisttitle">Playlist preview</legend>
+			<div id="epikestshows"></div>
+		</fieldset>
+		<fieldset>
+			<legend>Save playlist file</legend>
+			<input onclick="download_txt()" type="button" value="Download"
+				style="text-align: center; background: #222222; padding: 10px; color: lightgray;">
+		</fieldset>
+	</section>
+	<div id="audioinfo" style="display: none;">
+		<div>
+			<input type="range" class="progress-bar" value="0" step="0.01">
+			<input type="range" id="volume" min="0" max="1" step="0.01" value="1" style="width: 10%;"><br>
+			<span style="color: white; font-weight: bold;">
+				<span class="current-time">0:00</span>/<span class="total-time">0:00</span>
+			</span>
+		</div>
+		<div>
+			<audio src="" id="player" autoplay controls controlslist="nodownload" style="display: none;"></audio>
+			<div class="audio-controls">
+				<button class="rw-btn">
+					<i class="fa-solid fa-backward"></i>
+				</button>
+				<button class="play-pause-btn">
+					<i class="fa-solid fa-play"></i>
+				</button>
+				<button class="ff-btn">
+					<i class="fa-solid fa-forward"></i>
+				</button>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>

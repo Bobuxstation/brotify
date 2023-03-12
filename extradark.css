@@ -1,254 +1,320 @@
 * {
-    font-family: inter;
-      box-sizing:  border-box;
-      margin: 0;
-    user-select: none;
-    transition: .5s ease;
-  }
-  body, html {
-    padding-top: 27px;
-    background-color: #1d1d1d;
-    overflow: hidden;
-  }
-  fieldset {
-    border: none;
-    font-size: 20px;
-    overflow: auto;
-  }
-  .logo {
-    position:fixed!important;
-    z-index:2;
-    left: 0;
-    height: 46px;
-    width: 184px;
-    margin: 5px;
-  }
-  input {
-    margin: 10px;
-    height: 35px;
-    width: 50%;
-    border-radius: 5px;
-    text-align: center;
-    border: none;
-    background: white;
-    color: black;
-  }
-  section {
-      color: white;
-      width: 75vw;
-      box-sizing: border-box;
-      float: right;
-      height: 100vh;
-      padding: 20px;
-      overflow: scroll;
-      padding-bottom: 200px;
-  }
-  
-  footer {
-    background-color: #222222;
-    padding: 30px;
-    color: white;
-  }
-  
-  h1 {
-      text-align: left;
-  }
-  
-  p {
-      text-align: left;
-  }
-  
-  nav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  li {
-    float: right;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #222222;
-    z-index: 1;
-    height: 55px;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
+  font-family: inter;
+  box-sizing: border-box;
+  margin: 0;
+  user-select: none;
+  transition: .5s ease;
+}
 
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #2d2d2d;
-  }
-  .signup {
-      text-align:center;
-           width:100%;
-  }
-  .target {
+body,
+html {
+  padding-top: 27px;
+  background-color: #1d1d1d;
+  overflow: hidden;
+}
+
+fieldset {
+  border: none;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.logo {
+  position: fixed !important;
+  z-index: 2;
+  left: 0;
+  height: 46px;
+  width: 184px;
+  margin: 5px;
+}
+
+input {
+  margin: 10px;
+  height: 35px;
+  width: 50%;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  background: white;
+  color: black;
+}
+
+section {
+  color: white;
+  width: 75vw;
+  box-sizing: border-box;
+  float: right;
+  height: 100vh;
+  padding: 20px;
+  overflow: scroll;
+  padding-bottom: 200px;
+}
+
+footer {
+  background-color: #222222;
+  padding: 30px;
+  color: white;
+}
+
+h1 {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+nav {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+li {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #222222;
+  z-index: 1;
+  height: 55px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #2d2d2d;
+}
+
+.signup {
+  text-align: center;
+  width: 100%;
+}
+
+.target {
   width: 50px;
   margin: 0 auto;
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(158, 217, 234, 0.5);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+#game {
+  width: 260px;
+  height: 260px;
+  box-sizing: border-box;
+  padding: 0;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  float: left;
+  margin: 5px;
+  background-size: cover;
+  border: none;
+  font-size: 20px;
+  color: white;
+}
+
+#game div {
+  background-color: #1d1d1dab;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 180px;
+  height: 80px;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  text-align: left;
+  overflow: hidden;
+}
+
+#game div:hover {
+  background-color: #1d1d1dab;
+  margin-top: 0;
+  height: 260px;
+  backdrop-filter: blur(0px);
+}
+
+#game:focus {
+  box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+  cursor: pointer;
+  filter: brightness(90%);
+  transition: 0.5s ease;
+}
+
+#game:hover {
+  box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+  cursor: pointer;
+  filter: brightness(90%);
+  transition: 0.5s ease;
+}
+
+.desc {
+  color: #00000000;
+}
+
+#game:hover .desc {
+  color: lightgray;
+}
+
+#episode {
+  height: 60px;
+  font-size: 16px;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  color: white;
+  background: none;
+  border: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#episode img {
+  height: 55px;
+  border-radius: 5px;
+}
+
+#episode:hover {
+  background: #2d2d2d;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+#episode:focus {
+  background: #2d2d2d;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+#episodes {
+  border: white solid .5px !important;
+}
+
+#episodes img {
+  border: white solid .5px !important;
+}
+
+#sidebar {
+  height: 100vh;
+  color: white;
+  width: 25vw;
+  background-color: #222222;
+  float: left;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+#audioinfo {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  background-color: #2d2d2d;
+  width: 100vw;
+  padding: 10px;
+  height: 110px;
+  border: #3d3d3d solid 1px;
+  border-width: 2px 0px 0px 0px;
+  box-sizing: border-box;
+  text-align: center;
+
+  animation-name: slideInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+input[type="range"] {
+  margin: 0;
+  accent-color: #F03A17;
+  height: 5px;
+}
+
+#audioinfo button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.publisher {
+  color: lightgray;
+  margin-top: 5px;
+}
+
+.play {
+  background-color: gray !important;
+}
+
+.pause {
+  background-color: #3d3d3d !important;
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    visibility: visible;
   }
-  .container {
-    position: relative;
-    width: 300px;
-    height: 50px;
-    text-align: center;
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-  
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(158, 217, 234, 0.5);
-  }
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-  }
-  #game {
-    width: 260px;
-    height: 260px;
-    box-sizing: border-box;
-    padding: 0;
-    transition: all 0.5s ease;
-    border-radius: 5px;
-    float:left;
-    margin: 5px;
-    background-size: cover;
-    border: none;
-    font-size:20px;
-    color: white;
-  }
-  #game div {
-    background-color: #1d1d1dab;
-    padding: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    margin-top: 180px;
-    height: 80px;
-    backdrop-filter: blur(60px);
-    border-radius: 5px;
-    text-align: left;
-  }
-  #game:focus {
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
-    cursor: pointer;
-    filter: brightness(90%);
-    transition: 0.5s ease;
-  }
-  #game:hover {
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
-    cursor: pointer;
-    filter: brightness(90%);
-    transition: 0.5s ease;
-  }
-  #episode {
-    height: 60px;
-    font-size: 16px;
-    padding: 2px;
-    box-sizing:border-box;
-    transition: all 0.5s ease;
-    color: white;
-    background: none;
-    border: none;
-    display:block;
-    width: 100%;
-    text-align: left;
-  }
-  #episode img {
-      height: 55px;
-      border-radius: 5px;
-  }
-  #episode:hover {
-      background: #2d2d2d;
-      border-radius: 5px;
-    transition: all 0.5s ease;
-  }
-  #episode:focus {
-      background: #2d2d2d;
-      border-radius: 5px;
-    transition: all 0.5s ease;
-  }
-  #episodes {
-    border: white solid .5px !important;
-  }
-  #episodes img {
-    border: white solid .5px !important;
-  }
-  #sidebar {
-    height: 100vh;
-    color: white;
-    width: 25vw;
-    background-color: #222222;
-    float: left;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-  #audioinfo {
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    background-color: #2d2d2d;
-    width: 100vw;
-    padding: 10px;
-    height: 90px;
-    border: #3d3d3d solid 1px;
-    border-width: 2px 0px 0px 0px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  input[type="range"] {
-    margin: 0;
-    accent-color: #F03A17;
-    height: 5px;
-  }
-  #audioinfo button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 25px;
-    border-radius: 10px;
-    margin: 10px;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-  }
-  .publisher {
-    color: lightgray;
-    margin-top: 5px;
-  }
+}
