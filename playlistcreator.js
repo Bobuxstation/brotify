@@ -25,6 +25,7 @@ function createplaylist() {
         btn.style.backgroundImage = "url(" + banner + ")";
         btn.onclick = function () {
             document.getElementById("player").src = items.audio;
+            document.getElementById('audioinfo').style.display = "block"
         };
         gameList.appendChild(btn);
     })
