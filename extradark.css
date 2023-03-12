@@ -204,7 +204,7 @@ li a:hover {
   color: #00000000;
 }
 
-#game:hover .desc {
+#game div:hover .desc {
   color: lightgray;
 }
 
