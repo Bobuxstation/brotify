@@ -34,4 +34,3 @@ function dropHandler(ev) {
 function dragOverHandler(ev) {
     ev.preventDefault();
 }
-
