@@ -49,6 +49,7 @@ function promptplaylist() {
                 let banner = items.bg;
                 btn.style.backgroundImage = "url(" + banner + ")";
                 btn.onclick = function () {
+                    document.getElementById('songtitle').innerText = items.name;
                     document.getElementById("player").src = items.audio;
                     document.getElementById('audioinfo').style.display = "block"
                 };
@@ -68,5 +69,5 @@ function download_txt() {
 }
 
 function about() {
-    window.alert("Brotify v2.0\nBy Arsyad&Bagus Studios")
+    window.alert("Brotify v3.0\nBy Arsyad&Bagus Studios")
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
 
 <head>
 	<link rel="icon" href="whitelogo.png">
 	<title>Brotify - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="interfont/inter.css">
 	<link rel="stylesheet" href="extradark.css">
 	<script src="homepageloader.js" defer></script>
@@ -11,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="fontawesome.js" crossorigin="anonymous"></script>
 	<script src="player.js" defer></script>
+	<script src="mp3player.js"></script>
 </head>
 
 <body>
@@ -29,6 +31,13 @@
 		<a href="playlistcreator.html">
 			<h4><i class="fa-solid fa-icons"></i> Playlist Creator</h4>
 		</a>
+		<BR>
+		<a onclick="document.getElementById('audioFileChooser').click()">
+			<h4><i class="fa-solid fa-upload"></i> Upload Audio</h4>
+		</a>
+
+		<input id="audioFileChooser" type="file" onchange="readFile(this.files);" style="display: none;">
+
 		<BR>
 		<hr style="border: gray solid 1px;"><BR>
 		<h4 onclick="promptplaylist()"><i class="fa-solid fa-music"></i> Open Playlist</h4>
@@ -59,10 +68,11 @@
 	</section>
 	<div id="audioinfo" style="display: none;">
 		<div>
-			<input type="range" class="progress-bar" value="0" step="0.01">
-			<input type="range" id="volume" min="0" max="1" step="0.01" value="1" style="width: 10%;"><br>
-			<span style="color: white; font-weight: bold;">
-				<span class="current-time">0:00</span>/<span class="total-time">0:00</span>
+			<input type="range" class="progress-bar" value="0" step="0.01">&nbsp;
+			<input type="range" id="volume" min="0" max="1" step="0.01" value="1" style="width: 10px;margin-bottom: 10px;"><br>
+			<span style="color: gray !important;font-weight: bold;margin-top: 10px;">
+				<span id="songtitle"></span> |
+				<span class="current-time">00:00</span>/<span class="total-time">00:00</span>
 			</span>
 		</div>
 		<div>
@@ -71,7 +81,7 @@
 				<button class="rw-btn">
 					<i class="fa-solid fa-backward"></i>
 				</button>
-				<button class="play-pause-btn">
+				<button class="play-pause-btn" style="border-radius: 50%;">
 					<i class="fa-solid fa-play"></i>
 				</button>
 				<button class="ff-btn">

@@ -81,7 +81,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #222222;
+  background-color: #232323;
   z-index: 1;
   height: 55px;
 }
@@ -251,7 +251,7 @@ li a:hover {
   height: 100vh;
   color: white;
   width: 25vw;
-  background-color: #222222;
+  background-color: #232323;
   float: left;
   box-sizing: border-box;
   padding: 20px;
@@ -263,13 +263,12 @@ li a:hover {
   bottom: 0;
   background-color: #2d2d2d;
   width: 100vw;
-  padding: 10px;
+  padding: 5px;
   height: 110px;
   border: #3d3d3d solid 1px;
   border-width: 2px 0px 0px 0px;
   box-sizing: border-box;
   text-align: center;
-
   animation-name: slideInUp;
   animation-duration: 0.5s;
   animation-fill-mode: both;
@@ -287,9 +286,9 @@ input[type="range"] {
   color: white;
   font-size: 25px;
   border-radius: 10px;
-  margin: 10px;
-  width: 35px;
-  height: 35px;
+  margin: 5.5px;
+  width: 40px;
+  height: 40px;
   text-align: center;
 }
 
@@ -317,4 +316,8 @@ input[type="range"] {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+
+#volume:hover {
+  width: 15% !important;
 }
